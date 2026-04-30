@@ -145,6 +145,10 @@ body {
 }
 
 /* header */
+
+.header {
+  background-color: #F3F6FA;
+}
 .header__container {
   height: 65px;
   display: flex;
