@@ -15,30 +15,30 @@
     <!-- Styles  -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="body">
+  <body class="body" id="top">
     
-      <header class="header">
+      <header class="header" id="header">
         <div class="container header__container">
-        <a href="./index.html" class="logo header__logo">
+        <a href="#top" class="logo header__logo">
           <img src="./img/logo-cimaaa.svg" alt="CIMA logo" class="logo__img" />
         </a>
         <nav class="nav header__nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
-            <li class="nav__item"><a href="#services" class="nav__link">Servicios</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link nav__link-width">El sistema CIMA</a></li>
+            <li class="nav__item"><a href="#soluciones" class="nav__link">Soluciones</a></li>
             <li class="nav__item">
-              <a href="#portfolio" class="nav__link">Portfolio</a>
+              <a href="#proyectos" class="nav__link">Proyectos</a>
             </li>
           </ul>
         </nav>
         <button id="openModal" type="button" class="js-open-modal button header__button button--primary">
-          Contáctanos
+          Hablemos
         </button>
         </div>
       </header>
       <main>
         <section class="section hero">
-            <img src="./img/HEROOO.jpg" alt="Laptop on office desk"  class="hero__bg">
+            <img src="./img/Hero-IMG.png" alt="Laptop on office desk"  class="hero__bg">
           <div class="hero__container container">
           
               <div class="hero__overlay"></div>
@@ -47,16 +47,17 @@
                 <span class="hero__dot js-dot"></span>
                 AGENCIA DE COMUNICACIÓN INTEGRAL
               </p> -->
-              <h1 class="hero__title">
-                <span>Impulsamos marcas con</span>
-                <span class="hero__title-line">estrategia </span>
-                <span> diseño <br>y acción</span>
-              </h1>
+             <h1 class="hero__title">
+  <span>Construimos marcas</span>
+  <span class="hero__title-line">listas para crecer</span>
+</h1>
               <p class="hero__text">
-                Somos el sistema detrás del crecimiento de tu empresa Todo en un solo equipo
-              </p>
+Ayudamos a expertos y negocios a crear
+marcas fuertes, presencia digital y estrategias
+para crecer
+</p>
              <button class="button button--primary hero__button js-open-modal" type="button">
-  <span class="hero__button-text">Trabajemos juntos</span>
+  <span class="hero__button-text">Hablemos de tu proyecto</span>
 
   <svg 
     class="button__icon" 
@@ -95,7 +96,7 @@
               </button>
 
               <h2 class="modal__title">Agendemos una reunión</h2>
-              <form class="modal__form">
+              <form class="modal__form" id="contact-form">
 
       <div class="modal__field">
          <div class="modal__label">
@@ -105,7 +106,7 @@
 
         <label for="name">Nombre completo</label>
         </div>
-        <input id="name" type="text" placeholder="Ej: Maria Gonzalez">
+        <input id="name" name="name" type="text" placeholder="Ej: Maria Gonzalez">
       </div>
 
       <div class="modal__field">
@@ -116,7 +117,7 @@
 
         <label for="email">Correo electrónico</label>
         </div>
-        <input id="email" type="email" placeholder="ejemplo@gmail.com">
+        <input id="email" name="email" type="email" placeholder="ejemplo@gmail.com">
       </div>
 
       <div class="modal__field">
@@ -129,6 +130,7 @@
         </div>
         <input 
           id="business"
+          name="category"
           type="text" 
           placeholder="Restaurante, tienda..."
           > 
@@ -145,6 +147,7 @@
       
           <textarea
             id="message"
+            name="message"
             placeholder="Escribe tu consulta..."
           ></textarea>
       </div>
@@ -163,13 +166,13 @@
         <section id="about" class="section about">
           <div class="container">
             <div class="section-header">
-              <p class="section-header__eyebrow">¿QUIÉNES SOMOS?</p>
+              <p class="section-header__eyebrow">NUESTROS PILARES</p>
               <h2 class="section-header__title">
-                ¿Qué es <span class="section-header__accent">CIMA</span>?
+                El sistema <span class="section-header__accent">CIMA</span>
               </h2>
               <p class="section-header__subtitle">
-                Cuatro pilares que construyen marcas sólidas y estrategias que
-                <br>generan resultados
+               Una metodología propia para transformar ideas en marcas fuertes, 
+con estrategia, identidad y crecimiento
               </p>
             </div>
 
@@ -181,8 +184,7 @@
                 </div>
                 <h3 class="about__card-title">Comunicación</h3>
                 <p class="about__card-text">
-                 Contamos tu historia de forma estratégica, conectando tu marca <br>con tu audiencia ideal
-                </p>
+Construimos un mensaje claro para que tus clientes entiendan quién eres y por qué elegirte                </p>
               </li>
               <li class="about__card">
                 <div class="about__card-icon">
@@ -191,7 +193,7 @@
                 </div>
                 <h3 class="about__card-title">Identidad</h3>
                 <p class="about__card-text">
-                  Creamos tu imagen <br>visual con coherencia, diferenciación y una estética memorable
+                  Creamos tu imagen visual con coherencia, diferenciación y una estética memorable
                 </p>
               </li>
               <li class="about__card">
@@ -199,9 +201,9 @@
                  <div><img src="./img/Management.svg" alt="Management icon" /></div> 
                   <img src="./img/M.svg" alt="M" class="about__card-letter" />
                 </div>
-                <h3 class="about__card-title">Management</h3>
+                <h3 class="about__card-title">Gestión</h3>
                 <p class="about__card-text">
-                  Organizamos tus procesos de comunicación para que todo funcione con claridad br y orden
+                  Creamos sistemas claros para que tu marca comunique de forma coherente
                 </p>
               </li>
               <li class="about__card">
@@ -211,22 +213,19 @@
                 </div>
                 <h3 class="about__card-title">Acción</h3>
                 <p class="about__card-text">
-                  Impulsamos resultados con ejecución ágil, producción de calidad <br> y optimización <br> constante
-                </p>
+Impulsamos resultados con ejecución ágil, calidad y optimización constante                </p>
               </li>
             </ul>
           </div>
         </section>
 
-        <section id="services" class="section service">
+        <section id="soluciones" class="section service">
           <div class="container">
           <div class="section-header">
-            <p class="section-header__eyebrow">LO QUE HACEMOS</p>
-            <h2 class="section-header__title">Nuestros Servicios</h2>
+            <p class="section-header__eyebrow">CÓMO AYUDAMOS</p>
+            <h2 class="section-header__title">Soluciones para crecer</h2>
             <p class="section-header__subtitle">
-              Soluciones integrales de comunicación diseñadas para impulsar 
-              el <br>
-              crecimiento de tu marca
+             Soluciones estratégicas para construir, posicionar y hacer crecer tu marca
             </p>
           </div>
           <ul class="service__list">
@@ -238,8 +237,7 @@
               /></div>
               <h3 class="service__title">Identidad & Branding</h3>
               <p class="service__subtitle">
-                Diseño de marca integral: <br> logotipo, paleta cromática, tipografía <br>
-                y manual de identidad visual
+                Construimos una identidad visual coherente para diferenciar tu marca y generar reconocimiento
               </p>
             </li>
                <li class="service__card">
@@ -250,8 +248,7 @@
               /></div>
               <h3 class="service__title">Estrategia</h3>
               <p class="service__subtitle">
-                Planificación estratégica de <br>comunicación, posicionamiento <br>
-                  y crecimiento de marca
+               Definimos el posicionamiento y las acciones necesarias para que tu marca crezca con dirección
               </p>
             </li>
                <li class="service__card">
@@ -260,10 +257,9 @@
                 alt="Gestión de Redes"
                 class="service__img"
               /></div>
-              <h3 class="service__title">Gestión de Redes</h3>
+              <h3 class="service__title">Contenido & Comunidad</h3>
               <p class="service__subtitle">
-                Administración profesional de redes <br> sociales con contenido estratégico <br> 
-                  y planificado
+                Creamos contenido estratégico para aumentar confianza, conexión y oportunidades de venta
               </p>
             </li>
                <li class="service__card">
@@ -272,32 +268,30 @@
                 alt="Producción de contenidos"
                 class="service__img"
               /></div>
-              <h3 class="service__title">Producción de contenidos</h3>
+              <h3 class="service__title">Web & Experiencia Digital</h3>
               <p class="service__subtitle">
-                Fotografía, video y piezas gráficas de <br>alta calidad para todos tus canales
-              </p>
+Creamos experiencias digitales, sitios web y soluciones online que fortalecen tu marca y generan oportunidades              </p>
             </li>
                <li class="service__card">
               <div> <img
                 src="./img/Diseño.svg"
-                alt="Diseño UX y UI"
+                alt="Automatización y Marketing"
                 class="service__img"
               /></div>
-              <h3 class="service__title">Diseño UX/UI</h3>
+              <h3 class="service__title">Automatización & Marketing</h3>
               <p class="service__subtitle">
-                Interfaces digitales intuitivas, modernas <br>y centradas en la experiencia del usuario
-              </p>
+Creamos sistemas digitales para automatizar procesos, captar clientes y mejorar la eficiencia de tu negocio              </p>
             </li>
-               <div class="service__card">
+               <li class="service__card">
               <div> <img
                 src="./img/Publicidad-Ventas.svg"
                 alt="Publicidad y Ventas"
                 class="service__img"
               /> </div>
-              <h3 class="service__title">Publicidad & Ventas</h3>
+              <h3 class="service__title">Crecimiento & Conversión</h3>
               <p class="service__subtitle">
-                Campañas publicitarias orientadas a <br>resultados, conversión y retorno de <br> inversión
-              </p>
+                Diseñamos acciones de marketing orientadas a atraer clientes y convertir oportunidades en resultados
+                </p>
             </li>
           </ul>
           </div>
@@ -306,7 +300,7 @@
         <section class="section methods">
           <div class="container">
           <div class="section-header">
-            <p class="section-header__eyebrow">COMO TRABAJAMOS</p>
+            <p class="section-header__eyebrow">NUESTRA METODOLOGÍA</p>
             <h2 class="section-header__title">Nuestro Método</h2>
             <p class="section-header__subtitle">
               Un proceso claro y eficiente para transformar ideas en resultados
@@ -317,7 +311,7 @@
             <li class="steps__item">
               <div class="steps__wrap"><div class="steps__step">01</div></div>
               
-              <h3 class="steps__heading">Diagnóstico</h3>
+              <h3 class="steps__heading">Descubrimos</h3>
               <p class="steps__description">
                 Analizamos tu situación actual, tu <br> mercado y tus objetivos para <br>
                 entender el punto de partida
@@ -326,7 +320,7 @@
             <li class="steps__item">
               <div class="steps__wrap"><div class="steps__step">02</div></div>
               
-              <h3 class="steps__heading">Planificación</h3>
+              <h3 class="steps__heading">Construimos</h3>
               <p class="steps__description">
                 Desarrollamos una estrategia <br> integral a medida con acciones <br>
                 claras y un plan de ejecución <br> definido
@@ -335,7 +329,7 @@
             <li class="steps__item">
               <div class="steps__wrap"><div class="steps__step">03</div></div>
               
-              <h3 class="steps__heading">Producción</h3>
+              <h3 class="steps__heading">Impulsamos</h3>
               <p class="steps__description">
                 Ejecutamos cada pieza, campaña <br>y entregable con calidad y <br>
                 optimización constante
@@ -345,11 +339,11 @@
           </div>
         </section>
 
-        <section id="portfolio" class="section portfolio">
+        <section id="proyectos" class="section portfolio">
           <div class="container">
           <div class="section-header">
-            <p class="section-header__eyebrow">PORTAFOLIO</p>
-            <h2 class="section-header__title">Proyectos Destacados</h2>
+            <p class="section-header__eyebrow">Casos de marca</p>
+            <h2 class="section-header__title">Proyectos reales</h2>
             <p class="section-header__subtitle">
               Marcas que confiaron en nosotros y obtuvieron resultados reales
             </p>
@@ -359,7 +353,7 @@
             <li class="portfolio__card">
               <img src="./img/Portf.sg.jpg" alt="" class="portfolio__img"/>
                <div class="portfolio__overlay">
-                 <h3 class="portfolio__title">SG Impresiones</h3>
+                 <h3 class="portfolio__title">CIMA Studio</h3>
                   <p class="portfolio__text">Identidad & Branding</p>
                  </div>
             
@@ -368,7 +362,7 @@
               <img src="./img/Portf.Tuki.jpg" alt="" class="portfolio__img"/>
               <div class="portfolio__overlay">
                  <h3 class="portfolio__title">TUKI Drugstore</h3>
-                  <p class="portfolio__text">Prod, de Contenidos</p>
+                  <p class="portfolio__text">Producción de contenido</p>
                  </div>
             </li>
             <li class="portfolio__card">
@@ -463,7 +457,8 @@
         </p>
         </div>
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-      <script src="./script.js"></script>
+<script src="./script.js"></script>
   </body>
 </html>
