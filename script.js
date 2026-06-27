@@ -1,36 +1,5 @@
 emailjs.init("kznunU3tJkXsbyvxr");
 
-const modal = document.getElementById('modal');
-const openBtns = document.querySelectorAll('.js-open-modal');
-const closeBtn = document.querySelector('.modal__close');
-const overlay = document.querySelector('.modal__overlay');
-
-function getScrollbarWidth() {
-  return window.innerWidth - document.documentElement.clientWidth;
-}
-
-/* MODAL */
-function openModal() {
-  const scrollbarWidth = getScrollbarWidth();
-
-  document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
-  document.body.classList.add('modal-open');
-  modal.classList.add('is-open');
-}
-
-function closeModal() {
-  document.body.classList.remove('modal-open');
-  modal.classList.remove('is-open');
-}
-
-openBtns.forEach(btn => btn.addEventListener('click', openModal));
-closeBtn.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
-});
-
 /* NAV ACTIVE */
 const links = document.querySelectorAll('.nav__link');
 const sections = document.querySelectorAll('section[id]');
@@ -53,6 +22,17 @@ window.addEventListener('scroll', () => {
     if (link.getAttribute('href') === `#${current}`) {
       link.classList.add('active');
     }
+  });
+});
+
+/* FAQ TOGGLE */
+const faqItems = document.querySelectorAll('.faq__item');
+
+faqItems.forEach(item => {
+  const button = item.querySelector('.faq__question');
+
+  button.addEventListener('click', () => {
+    item.classList.toggle('is-open');
   });
 });
 
@@ -123,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       alert("¡Mensaje enviado ✔");
       form.reset();
-      closeModal();
 
     } catch (error) {
       console.log("ERROR:", error);
@@ -142,6 +121,6 @@ const heroTitle = document.querySelector('.hero h1');
 if (heroTitle) {
   window.addEventListener('scroll', () => {
     const top = heroTitle.getBoundingClientRect().top;
-    header.classList.toggle('scrolled', top < 80);
+    header.classList.toggle('scrolled', top < 120);
   });
 }
